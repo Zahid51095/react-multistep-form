@@ -1,8 +1,8 @@
 import { FormEvent, useState } from "react"
-// import { AccountForm } from "./AccountForm"
-// import { AddressForm } from "./AddressForm"
+import { AccountForm } from "./AccountForm"
+import { AddressForm } from "./AddressForm"
 import { useMultistepForm } from "./useMultistepForm"
-// import { UserForm } from "./UserForm"
+import { UserForm } from "./UserForm"
 
 type FormData = {
   firstName: string
