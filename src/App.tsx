@@ -3,6 +3,7 @@ import { AccountForm } from "./AccountForm"
 import { AddressForm } from "./AddressForm"
 import { useMultistepForm } from "./useMultistepForm"
 import { UserForm } from "./UserForm"
+import Swal from 'sweetalert2'
 
 type FormData = {
   firstName: string
@@ -45,7 +46,13 @@ function App() {
   function onSubmit(e: FormEvent) {
     e.preventDefault()
     if (!isLastStep) return next()
-    alert("Successful Account Creation")
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Your Account Has been Created Successfully.",
+      showConfirmButton: false,
+      timer: 1500
+    });
   }
 
   return (
